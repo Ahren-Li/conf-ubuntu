@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -z $(which typora) ];then
+	ADD_PPA_KEY "https://typora.io/linux/public-key.asc"
+	ADD_PPA "deb https://typora.io/linux ./"
+	ADD_SW "typora"
+fi
