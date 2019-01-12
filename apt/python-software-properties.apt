@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [[ ! $UBUNTU_12 ]]; then
+	return
+fi
+
+if [ -z $(which apt-add-repository) ];then
+	ADD_CORE_SW "python-software-properties"
+fi

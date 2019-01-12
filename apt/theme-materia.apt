@@ -1,4 +1,11 @@
 #!/bin/bash
 
-PPA_SW+=" ppa:dyatlov-igor/materia-theme"
-SW=" gnome-themes-standard gtk2-engines-murrine libglib2.0-dev libxml2-utils materia-gtk-theme"
+if [ ! -d "/usr/share/themes/Materia" ];then
+	ADD_PPA "ppa:dyatlov-igor/materia-theme"
+	ADD_SW  "gnome-themes-standard"
+	ADD_SW  "gtk2-engines-murrine"
+	ADD_SW  "libglib2.0-dev"
+	ADD_SW  "libxml2-utils"
+	ADD_SW  "materia-gtk-theme"
+fi
+	

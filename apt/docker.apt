@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ -z $(which docker) ];then
+	ADD_SW "docker.io"
+fi

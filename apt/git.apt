@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ -z $(which git) ];then
+	ADD_SW "git"
+fi

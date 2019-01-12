@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ -z $(which vim) ];then
+	ADD_SW "vim"
+fi

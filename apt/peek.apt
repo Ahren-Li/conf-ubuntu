@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ -z $(which peek) ];then
+	ADD_PPA "ppa:peek-developers/stable"
+	ADD_SW  "peek"
+fi

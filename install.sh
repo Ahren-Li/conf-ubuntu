@@ -3,26 +3,26 @@ if [[ ! $UBUNTU ]]; then
 	return
 fi
 
-if [ ! -z $CORE_SW ];then
+if [ ! -z "$CORE_SW_LIST" ];then
 	apt-get update
-	for core in $CORE_SW
+	for core in $CORE_SW_LIST
 	do
-		echo $core
-		#apt-get install -y $core
+		INFO_INSTALL "[CORE] $core"
+		apt-get install -y $core
 	done
 fi
 
-if [ ! -z $PPA_SW ];then
-	for ppa in $PPA_SW
+if [ ! -z "$PPA_LIST" ];then
+	for ppa in $PPA_LIST
 	do
-		echo $ppa
-		#apt-add-repository -y $ppa
+		INFO_PPA $ppa
+		apt-add-repository -y $ppa
 	done
 	apt-get update
 fi
 
-for sw in $SW
+for sw in $SW_LIST
 do
-	echo $sw
-	#apt-get install -y $sw
+	INFO_INSTALL $sw
+	apt-get install -y $sw
 done
